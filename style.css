@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    font-family:'Montserrat', 'Open San', sans-serif;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    font-size: 14px;
+
+    grid-template-areas:"header   header   header"
+                        "main     main     aside"
+                        "widget-1 widget-2 aside"
+                        "footer   footer   footer";
+}
+
+
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .main,
+.contenedor .aside,
+.contenedor .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+/*-------------------HEADER------------------------------------*/
+.contenedor .header {
+    background: #FF8C00;
+    color: #fff;
+    /*grid-column-start: 1 ;
+    grid-column-end: -1;*/
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor .header h1 {
+    margin-bottom: 20px;
+}
+
+.contenedor .header .menu {
+    margin: auto;
+    justify-content: end;
+}
+
+
+.contenedor .header .menu a {
+    margin: auto 10px;
+    color: #fff;
+    padding-bottom: 9px;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1em;
+}
+
+.contenedor .header .menu a:hover{
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+/*-------------------MAIN------------------------------------*/
+.contenedor .main {
+    background: #F0E68C;
+    /*grid-column: span 2;*/
+    grid-area: main;
+    line-height: 2;
+}
+
+.contenedor .main h2 {
+    padding-bottom: 15px;
+}
+.contenedor .main h3 {
+    padding-top: 20px;
+}
+
+.definicion {
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.populares nav a{
+    color: #2F4F4F;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.populares nav a:hover {
+    border-bottom: 2px solid #3CB371;
+    color: #000;
+}
+
+
+.populares ol {
+    padding-left: 50px; 
+}
+
+.populares li {
+    margin-bottom: 15px;
+}
+.top {
+    text-align: center;
+}
+
+.sinopsis {
+    text-align: center;
+}
+
+.contenedor .main section p {
+    text-align: justify;
+}
+.contenedor .main article ul {
+    list-style: none;
+}
+
+/*-------------------ASIDE------------------------------------*/
+.contenedor .aside nav ul {
+    list-style: none;
+}
+
+.contenedor .aside h3 {
+    padding-bottom: 20px;
+}
+
+.contenedor .aside {
+    /*grid-column: 3/4;
+    grid-row: 2/4;*/
+    grid-area: aside;
+    background: #90EE90;
+}
+
+.contenedor .aside h3 {
+    text-align: center;
+}
+
+.contenedor .aside nav {
+    text-align: center;
+}
+
+.aside nav ul li {
+    padding-bottom: 20px;
+}
+.aside nav ul li a {
+    color: #ff6600; 
+    text-decoration: none !important; 
+    font-weight: bold; 
+    transition: color 0.3s ease-in-out;
+}
+
+.aside nav ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/*-------------------WIDGETS------------------------------------*/
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    background: #20B2AA;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.contenedor .widget-1 {
+    grid-area: widget-1;
+}
+.contenedor .widget-2 {
+    grid-area: widget-2;
+}
+.pikachu {
+    white-space: pre-wrap; /* Permite que el texto se ajuste dentro del contenedor si es necesario */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+th, td {
+    border: 1px solid #333; 
+    padding: 10px;
+    text-align: left; 
+}
+
+th {
+    background-color: #444;
+    color: white;
+}
+/*-------------------FOOTER------------------------------------*/
+.contenedor .footer {
+    background: #00FA9A;
+    /*grid-column: span 3;*/
+    grid-area: footer;
+    text-align: center;
+}
+
+.contenedor .footer address {
+    display: inline-block;
+}
+.contenedor .footer address .redes-sociales{
+    padding-bottom:30px ;
+}
+
+.contenedor .footer address .redes-sociales a {
+    color: #2F4F4F;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-left: 10px;
+}
+.contenedor .footer address .redes-sociales a:hover {
+    border-bottom: 2px solid #3CB371;
+    color: #000;
+    padding-bottom: 10px;
+}
+
+
+.formulario {
+    background: #fff;
+    width: 500px;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.formulario input {
+    display: block;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px ;
+    border-radius: 3px;
+    border: 1px solid #FE8800;
+    font-family: sans-serif;
+    font-size: 13px;
+
+}
+
+.formulario  textarea {
+    min-height: 120px;
+    max-height: 300px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus {
+    border: 2px solid #CE0A18;
+    outline: none;
+}
+
+.formulario input[type="submit"] {
+    width: 200px;
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #CE0A18;
+    color: #CE0A18;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.formulario input[type="submit"]:hover {
+    background: #CE0A18;
+    color: #fff;
+}
+
+/*-------------------HADAPTACIONES PARA DIFERENTES TAMAÑOS------------------------------------*/
+@media screen and (max-width :902px){
+
+    .contenedor .header {
+        display: block;
+        text-align: center;
+    }
+
+    .contenedor {
+        grid-template-areas:"header   header   header"
+                            "main     main     main"
+                            "aside    aside    aside"
+                            "footer   footer   footer";
+    }
+
+    .widget-1, .widget-2 {
+        display: none;
+    }
+
+    .footer .formulario {
+        max-width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width :405px){
+
+    .contenedor .header {
+        display: block;
+        text-align: center;
+    }
+    .contenedor .header .menu a {
+        width: 100%;
+    }
+
+    .contenedor {
+        grid-template-areas:"header   header   header"
+                            "main     main     main"
+                            "aside    aside    aside"
+                            "footer   footer   footer";
+    }
+
+    .widget-1, .widget-2 {
+        display: none;
+    }
+
+    .footer .formulario {
+        width: auto;
+    }
+
+    .formulario input[type="submit"] {
+        max-width: 100%;
+    }
+    .contenedor .main h2 {
+        text-align: center;
+    }
+
+}
