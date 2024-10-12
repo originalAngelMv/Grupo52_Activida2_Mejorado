@@ -346,3 +346,15 @@ th {
     }
 
 }
+
+
+
+.aside nav ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+.aside nav ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
